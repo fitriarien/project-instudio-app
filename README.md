@@ -1,4 +1,4 @@
-# project-instudio-app
+## project-instudio-app
 “instudio” is an application that can be used to order interior design service and maintain the database easily.
 - The admin can use this application to maintain product, image, and order.
 - The customer can use this application to view product, order, pay, etc.
@@ -6,7 +6,7 @@
 - Web app for admin
 - Mobile app for customer
 
-## Features
+### Features
 #### Mobile app for customer
 - Register
 - Login
