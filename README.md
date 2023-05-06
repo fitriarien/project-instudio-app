@@ -33,3 +33,5 @@
 - React.js
 - React Native
 - Tailwind CSS
+### UML & ER Diagram Link
+https://drive.google.com/file/d/1k8whAKLqa_59Mr_iOKoVFmSUzA0Rqvp8/view?usp=sharing
