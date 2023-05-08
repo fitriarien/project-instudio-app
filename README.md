@@ -24,16 +24,18 @@
 - Update Order
 ### Technology
 #### Server
-- Java 11
+- Java
 - Springboot framework
 - MySQL 
 - Firebase Storage
 - Postman API
 - JWT (JSON Web Token)
 #### Client
+- Javascript
 - React.js
 - React Native
 - Tailwind CSS
+- Expo Go
 ### UML & ER Diagram Link
 #### Recommendation: open with diagrams.net
 https://drive.google.com/file/d/1k8whAKLqa_59Mr_iOKoVFmSUzA0Rqvp8/view?usp=sharing
