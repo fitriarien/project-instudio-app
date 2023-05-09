@@ -5,12 +5,16 @@ import com.finalproject.springboot.model.dao.ProductDAO;
 import com.finalproject.springboot.model.dao.UserDAO;
 import com.finalproject.springboot.model.dto.ProductDTO;
 import com.finalproject.springboot.repository.ImageRepo;
+import com.finalproject.springboot.repository.ProductPageRepo;
 import com.finalproject.springboot.repository.ProductRepo;
 import com.finalproject.springboot.repository.UserRepo;
 import com.finalproject.springboot.util.CustomErrorType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,6 +31,8 @@ public class ProductRestController {
     public static final Logger logger = LoggerFactory.getLogger(ProductRestController.class);
     @Autowired
     ProductRepo productRepo;
+    @Autowired
+    ProductPageRepo productPageRepo;
     @Autowired
     UserRepo userRepo;
     @Autowired
@@ -220,5 +226,17 @@ public class ProductRestController {
             return new ResponseEntity<>(new CustomErrorType("Unable to delete. The role of " + currRole +
                     " doesn't have permission to delete product."), HttpStatus.FORBIDDEN);
         }
+    }
+
+
+    // ------------------- Retrieve all images with pagination -------------------------------------------
+    @GetMapping(value = "/products")
+    public Page<ProductDAO> findAllActiveProducts(@RequestParam int page, @RequestParam int size) {
+        logger.info("Request products on page : {}", page);
+        PageRequest pageRequest = PageRequest.of(page, size);
+        Specification<ProductDAO> specification = Specification.where((root, criteriaQuery, criteriaBuilder) ->
+                criteriaBuilder.equal(root.get("product_status"), 1)
+        );
+        return productPageRepo.findAll(specification, pageRequest);
     }
 }

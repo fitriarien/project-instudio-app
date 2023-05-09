@@ -199,12 +199,12 @@ public class OrderRestController {
                     OrderDetDAO orderDetDAO = new OrderDetDAO();
                     // get product_id
                     long product_id = Long.parseLong(String.valueOf(orderDetObj.get("product_id")));
-                    // logger.info("step 1");
+                    logger.info("step 1");
                     ProductDAO currProduct = productRepo.findById(product_id).orElse(null);
                     // set product_id to order_detail
                     orderDetDAO.setProductDAO(currProduct);
                     // set other field to order_detail
-                    // logger.info("step 2");
+                    logger.info("step 2");
                     orderDetDAO.setEstimated_time(Long.parseLong(String.valueOf(orderDetObj.get("estimated_time"))));
                     orderDetDAO.setProduct_size(Long.parseLong(String.valueOf(orderDetObj.get("product_size"))));
                     orderDetDAO.setProduct_theme(orderDetObj.get("product_theme").toString());
@@ -215,7 +215,7 @@ public class OrderRestController {
                     // update
                     currOrder.updateOrderDet(orderDetDAO);
                 }
-
+                logger.info("step 3");
                 // add order_amount
                 currOrder.setOrder_amount(orderAmount);
                 orderRepo.save(currOrder);

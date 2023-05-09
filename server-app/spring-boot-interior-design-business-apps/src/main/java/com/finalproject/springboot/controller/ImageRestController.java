@@ -2,12 +2,16 @@ package com.finalproject.springboot.controller;
 
 import com.finalproject.springboot.model.dao.*;
 import com.finalproject.springboot.model.dto.ImageDTO;
+import com.finalproject.springboot.repository.ImagePageRepo;
 import com.finalproject.springboot.repository.ImageRepo;
 import com.finalproject.springboot.repository.UserRepo;
 import com.finalproject.springboot.util.CustomErrorType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +28,8 @@ public class ImageRestController {
     public static final Logger logger = LoggerFactory.getLogger(ImageRestController.class);
     @Autowired
     ImageRepo imageRepo;
+    @Autowired
+    ImagePageRepo imagePageRepo;
     @Autowired
     UserRepo userRepo;
 
@@ -123,11 +129,27 @@ public class ImageRestController {
     // ------------------- Retrieve All Images --------------------------------------------
     @RequestMapping(value = "/image/", method = RequestMethod.GET, produces="application/json")
     public ResponseEntity<List<ImageDAO>> getAllImages() throws SQLException, ClassNotFoundException {
-        List<ImageDAO> images = imageRepo.findAll(); //direct jpa method
+        List<ImageDAO> images = imageRepo.findAll();
         if (images.isEmpty()) {
             return new ResponseEntity<>(images, HttpStatus.NOT_FOUND);
         }
 
+        /*for (ImageDAO image : images) {
+            if (image.getImage_status() == 0) {
+                images.remove(image);
+            }
+        }*/
         return new ResponseEntity<>(images, HttpStatus.OK);
+    }
+
+    // ------------------- Retrieve all images with pagination -------------------------------------------
+    @GetMapping(value = "/images")
+    public Page<ImageDAO> findAllActiveImages(@RequestParam int page, @RequestParam int size) {
+        logger.info("Request images on page : {}", page);
+        PageRequest pageRequest = PageRequest.of(page, size);
+        Specification<ImageDAO> specification = Specification.where((root, criteriaQuery, criteriaBuilder) ->
+                criteriaBuilder.equal(root.get("image_status"), 1)
+        );
+        return imagePageRepo.findAll(specification, pageRequest);
     }
 }
