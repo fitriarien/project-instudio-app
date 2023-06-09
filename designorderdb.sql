@@ -29,7 +29,7 @@ CREATE TABLE `image` (
   PRIMARY KEY (`image_id`),
   KEY `FKlxnnh0ir05khn8iu9tgwh1yyk` (`user_id`),
   CONSTRAINT `FKlxnnh0ir05khn8iu9tgwh1yyk` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `image` */
 
@@ -47,22 +47,27 @@ insert  into `image`(`image_id`,`image_name`,`image_path`,`image_status`,`user_i
 (11,'TV Cabinet','',0,13),
 (12,'TV Cabinet','',0,13),
 (13,'TV Cabinet','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/tv-cabinet.jpg?alt=media&token=44852d7b-eeb1-460c-a20e-28af26e7cd9c',1,13),
-(14,'Living-room','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/living-room-set.jpg?alt=media&token=2dc9a0c9-758f-41da-bf00-fe6e49fae018',1,14),
+(14,'Living-room','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/living-room-set.jpg?alt=media&token=2dc9a0c9-758f-41da-bf00-fe6e49fae018',0,14),
 (15,'TV Cabinet_Indust','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/tv-cabinet-industrial.jpg?alt=media&token=413a8e9d-e51e-4f2a-af88-a2749e01b43f',1,14),
 (16,'Living-room','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/living-room-set.jpg?alt=media&token=84b1e336-b415-4ed0-adf8-64f86367cebc',1,15),
-(17,'TV-Wall-Design','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/tv-wall.jpg?alt=media&token=4e174372-6a50-47cd-a775-970bf97efa3b',1,16),
-(18,'Living-room-balcony','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/living-room-balcony.jpg?alt=media&token=08471672-48c8-4e31-b5f0-3fcd57117e77',1,16),
+(17,'TV-Wall-Design','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/tv-wall.jpg?alt=media&token=e8842791-6c22-491e-b28c-a7586927b521&_gl=1*1uxtsel*_ga*MTI3MDQxNTEwNC4xNjg2MjA4OTk0*_ga_CW55HF8NVT*MTY4NjI4NjY0MS4zLjEuMTY4NjI4NjgwMC4wLjAuMA..',1,16),
+(18,'Living-room-balcony','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/living-room-balcony.jpg?alt=media&token=a563c3d8-df50-4c91-b11c-6948068613c7&_gl=1*kdbtux*_ga*MTI3MDQxNTEwNC4xNjg2MjA4OTk0*_ga_CW55HF8NVT*MTY4NjI4NjY0MS4zLjEuMTY4NjI4NjgyOS4wLjAuMA..',1,16),
 (19,'TV Cabinet_Indust','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/tv-wall.jpg?alt=media&token=e8842791-6c22-491e-b28c-a7586927b521',1,15),
-(20,'Living-room-small-space','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/living-room-small-space.jpg?alt=media&token=473bf67b-69b6-4aec-b609-8b5466954573',1,15),
-(21,'Bathtub','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/bathroom-bathtub.jpg?alt=media&token=69c3bb66-e4df-4118-af55-ee06a92c13ca',1,21),
-(22,'bath','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/bathroom-bathtub.jpg?alt=media&token=d7bd8eb3-49f2-4acc-8d51-ac4d31046fc8',0,15),
-(23,'Bathtub_small','',0,15),
+(20,'Living-room-small-space','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/living-room-small-space.jpg?alt=media&token=44503ff9-7025-44d4-b36a-d8bf969c8901&_gl=1*ijzflc*_ga*MTI3MDQxNTEwNC4xNjg2MjA4OTk0*_ga_CW55HF8NVT*MTY4NjI4NjY0MS4zLjEuMTY4NjI4Njg1MS4wLjAuMA..',1,15),
+(21,'Bathtub','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/bathroom-bathtub.jpg?alt=media&token=d7bd8eb3-49f2-4acc-8d51-ac4d31046fc8&_gl=1*18cdmvu*_ga*MTI3MDQxNTEwNC4xNjg2MjA4OTk0*_ga_CW55HF8NVT*MTY4NjI4NjY0MS4zLjEuMTY4NjI4Njg3NC4wLjAuMA..',1,21),
+(22,'bath','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/bathroom-bathtub.jpg?alt=media&token=d7bd8eb3-49f2-4acc-8d51-ac4d31046fc8',1,15),
+(23,'Bathtub_small','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/bathroom-small-space.jpg?alt=media&token=636fdca1-6050-449e-bb1d-a39f673664f3&_gl=1*wq01zb*_ga*MTI3MDQxNTEwNC4xNjg2MjA4OTk0*_ga_CW55HF8NVT*MTY4NjI4NjY0MS4zLjEuMTY4NjI4NjY3Ni4wLjAuMA..',1,15),
 (24,'Bathtub_small','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/bathroom-small-space.jpg?alt=media&token=636fdca1-6050-449e-bb1d-a39f673664f3',1,15),
 (25,'Living-room','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/living-room-small-space.jpg?alt=media&token=3b57ab71-226e-4d28-862b-1d56befa405e',0,15),
-(26,'Bed-room-small-spaces','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/bed-room-small-space.jpg?alt=media&token=b89851ed-259e-46df-be0c-eab976107e74',1,15),
-(27,'Bed-Room-Set-small','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/bed-room-small-space.jpg?alt=media&token=d9aee33a-f0c7-44c4-a1f4-3bdc3541b65b',0,15),
-(28,'Living-room','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/living-room-balcony.jpg?alt=media&token=a563c3d8-df50-4c91-b11c-6948068613c7',0,15),
-(29,'Living_Room_Set_B','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/living-room-set.jpg?alt=media&token=84b1e336-b415-4ed0-adf8-64f86367cebc',1,16);
+(26,'Bed-room-small-spaces','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/bed-room-small-space.jpg?alt=media&token=d9aee33a-f0c7-44c4-a1f4-3bdc3541b65b&_gl=1*1nfcm42*_ga*MTI3MDQxNTEwNC4xNjg2MjA4OTk0*_ga_CW55HF8NVT*MTY4NjI4NjY0MS4zLjEuMTY4NjI4NzAyMC4wLjAuMA..',1,15),
+(27,'Bed-Room-Set-small','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/bed-set-storage.jpg?alt=media&token=65463dac-60e6-4a6d-a4c7-544d389a7223&_gl=1*18xdj7n*_ga*MTI3MDQxNTEwNC4xNjg2MjA4OTk0*_ga_CW55HF8NVT*MTY4NjI4NjY0MS4zLjEuMTY4NjI4NzA1NC4wLjAuMA..',1,15),
+(28,'Living-room','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/living-room-balcony.jpg?alt=media&token=a563c3d8-df50-4c91-b11c-6948068613c7',1,15),
+(29,'Living_Room_Set_B','https://firebasestorage.googleapis.com/v0/b/instudio-dc36b.appspot.com/o/living-room-set.jpg?alt=media&token=84b1e336-b415-4ed0-adf8-64f86367cebc',1,16),
+(30,'Dining-room-set-industrial','',0,15),
+(31,'Dining-room-set-industrial','',0,15),
+(32,'Dining-room-set-industrial','',0,15),
+(33,'Dining-room-set-industrial','',0,15),
+(34,'Dining-room-set-industrial','https://firebasestorage.googleapis.com/v0/b/instudio2.appspot.com/o/dining-room-set-industrial.jpg?alt=media&token=6b631ff4-e5fc-40a0-95cd-9011966df4a7',1,15);
 
 /*Table structure for table `order` */
 
@@ -86,31 +91,31 @@ CREATE TABLE `order` (
 /*Data for the table `order` */
 
 insert  into `order`(`order_id`,`order_code`,`order_date`,`visit_date`,`visit_time`,`visit_address`,`user_id`,`order_amount`) values 
-(1,'TR1','2023-02-24','2023-03-03','10:00:00','Jakarta',5,41000000),
-(2,'TR2','2023-02-24','2023-03-01','08:00:00','Jakarta Timur',5,6000000),
-(3,'TR3','2023-02-24','2023-03-02','09:00:00','Jakarta Utara',5,0),
+(1,'TR1','2023-02-24','2023-03-03','10:00:00','Jakarta',5,45500000),
+(2,'TR2','2023-02-24','2023-03-01','08:00:00','Jakarta Timur',5,11000000),
+(3,'TR3','2023-02-24','2023-03-02','09:00:00','Jakarta Utara',5,16053624),
 (4,'TR4','2023-02-25','2023-03-02','09:00:00','Jakarta Utara',7,12000000),
 (5,'TR5','2023-02-25','2023-04-01','08:30:00','Jakarta Utara',8,24000000),
 (6,'TR6','2023-02-26','2023-02-28','09:30:00','Jakarta Utara',8,7000000),
 (7,'TR7','2023-02-28','2023-05-05','10:30:00','Jl. Abcd No.1, Bekasi',9,14000000),
-(8,'TR8','2023-03-01','2023-05-07','14:00:00','Jl. Abcd No.1, Bekasi',9,5000000),
+(8,'TR8','2023-03-01','2023-05-07','14:00:00','Jl. Abcd No.1, Bekasi',9,10500000),
 (9,'TR9','2023-05-01','2023-05-23','07:30:00','Cherry Hill Rd 9021, New York',10,20500000),
 (10,'TR10','2023-05-01','2035-12-25','12:30:00','Cherry Hill Rd 9021, New York',10,13500000),
-(11,'TR11','2023-05-01','2024-05-23','10:00:00','Cherry Hill Rd 9021, New York',10,15000000),
-(12,'TR12','2023-05-01','2024-05-23','10:00:00','Cherry Hill Rd 9021, New York',10,0),
+(11,'TR11','2023-05-01','2024-05-23','10:00:00','Cherry Hill Rd 9021, New York',10,25234666),
+(12,'TR12','2023-05-01','2024-05-23','10:00:00','Cherry Hill Rd 9021, New York',10,13120345),
 (13,'TR13','2023-05-01','2024-05-23','10:00:00','Cherry Hill Rd 9021, New York',10,5000000),
-(14,'TR14','2023-05-01','2022-04-23','13:30:00','Cherry Hill Rd 9021, New York',10,0),
+(14,'TR14','2023-05-01','2022-04-23','13:30:00','Cherry Hill Rd 9021, New York',10,13000000),
 (15,'TR15','2023-05-03','2023-12-23','10:00:00','Bandung',10,28000000),
-(16,'TR16','2023-05-03','2023-12-23','10:00:00','Jakarta',10,5000000),
+(16,'TR16','2023-05-03','2023-12-23','10:00:00','Jakarta',10,12000000),
 (17,'TR17','2023-05-03','2024-12-12','08:00:00','Jl. Abcd No.1, Bekasi',9,28000000),
 (18,'TR18','2023-05-04','2023-05-12','09:30:00','Jl. Abcd No.1, Bekasi',9,9500000),
 (19,'TR19','2023-05-04','2023-06-20','11:00:00','Bogor',9,13000000),
 (20,'TR20','2023-05-04','2023-07-07','07:30:00','Jl. Halmahera, Bandung',11,8500000),
 (21,'TR21','2023-05-05','2023-05-23','05:30:00','Jkt',20,0),
-(22,'TR22','2023-05-06','2023-05-10','08:00:00','Jakarta Utara',11,5323452),
-(23,'TR23','2023-05-06','2023-05-26','05:30:00','Jakarta',11,7658788),
-(24,'TR24','2023-05-06','2023-05-31','05:30:00','bBdg',11,0),
-(25,'TR25','2023-05-08','2023-05-23','14:00:00','Jl. Abcd No.1, Bekasi',23,15500000);
+(22,'TR22','2023-05-06','2023-05-10','08:00:00','Jakarta Utara',11,11323452),
+(23,'TR23','2023-05-06','2023-05-26','05:30:00','Jakarta',11,19116465),
+(24,'TR24','2023-05-06','2023-05-31','05:30:00','bBdg',11,10000000),
+(25,'TR25','2023-05-08','2023-05-23','14:00:00','Jl. Abcd No.1, Bekasi',23,28466246);
 
 /*Table structure for table `order_details` */
 
@@ -129,7 +134,7 @@ CREATE TABLE `order_details` (
   KEY `fk_order_id` (`order_id`),
   CONSTRAINT `fk_order_id` FOREIGN KEY (`order_id`) REFERENCES `order` (`order_id`),
   CONSTRAINT `fk_prod_order_id` FOREIGN KEY (`product_id`) REFERENCES `product` (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `order_details` */
 
@@ -169,7 +174,24 @@ insert  into `order_details`(`order_det_id`,`order_id`,`estimated_time`,`product
 (33,19,2,75,6,'Black & White',5000000),
 (34,22,3,75,4,'Black & White',5323452),
 (35,23,3,11,5,'Colorful',7658788),
-(36,25,4,114,9,'Black & White',15500000);
+(36,25,4,114,9,'Black & White',15500000),
+(37,3,1,106,6,'Black & White',4587879),
+(38,3,3,9,3,'Wooden',5465745),
+(39,12,2,11,3,'Wooden',6543763),
+(40,12,4,10,5,'Wooden',6576582),
+(41,11,3,11,4,'Industrial',5234666),
+(42,25,1,8,3,'Black & White',5466246),
+(43,25,3,6,12,'Colorful',7500000),
+(44,23,2,9,7,'Colorful',3457677),
+(45,23,1,93,6,'Modern',8000000),
+(46,22,1,69,3,'Industrial',6000000),
+(47,24,2,10,6,'Black & White',10000000),
+(48,2,1,11,4,'Wooden',5000000),
+(49,11,1,57,3,'Black & White',5000000),
+(50,14,2,11,12,'Minimalist',7500000),
+(51,8,1,115,6,'Industrial',5500000),
+(52,1,1,115,5,'Industrial',4500000),
+(53,14,2,115,6,'Industrial',5500000);
 
 /*Table structure for table `payment` */
 
@@ -228,7 +250,7 @@ CREATE TABLE `product` (
   KEY `FK979liw4xk18ncpl87u4tygx2u` (`user_id`),
   CONSTRAINT `FK979liw4xk18ncpl87u4tygx2u` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
   CONSTRAINT `fk_image_id` FOREIGN KEY (`image_id`) REFERENCES `image` (`image_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=115 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=116 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `product` */
 
@@ -244,7 +266,7 @@ insert  into `product`(`product_id`,`product_name`,`product_model`,`estimated_co
 (10,'Wardrobe','L-shaped',11000000,9,1,4),
 (11,'Bookshelf','Window Seat',7500000,10,1,4),
 (56,'TV Cabinet','Float',2500000,NULL,0,13),
-(57,'TV Cabinet','Float',3000000,13,1,14),
+(57,'TV Cabinet','Float',5000000,13,1,14),
 (58,'Living Room Set','Modern',12000000,14,0,14),
 (59,'TV Cabinet','Industrial',5500000,NULL,0,14),
 (60,'TV Cabinet B','Industrial',5500000,15,1,14),
@@ -260,7 +282,7 @@ insert  into `product`(`product_id`,`product_name`,`product_model`,`estimated_co
 (72,'','',0,NULL,0,15),
 (73,'','',0,NULL,0,15),
 (74,'','',0,NULL,0,15),
-(75,'Bathroom Set A','Modern',4783857,21,1,21),
+(75,'Bathroom Set A','Modern',4783857,21,0,21),
 (91,'Bathroom Set B','Industrial',7678567,NULL,0,15),
 (92,'Bathroom Set B','Small-spaces',40759648,NULL,0,15),
 (93,'Bathroom Set C','Small-spaces',3576882,24,1,15),
@@ -270,9 +292,10 @@ insert  into `product`(`product_id`,`product_name`,`product_model`,`estimated_co
 (99,'','',0,NULL,0,15),
 (100,'','',0,NULL,0,15),
 (101,'Kitchen Set B','',0,NULL,0,15),
-(106,'Living Room Set D','Modern',4678680,25,1,15),
+(106,'Living Room Set D','Modern & Small Spaces',8500000,25,0,15),
 (113,'Bed Set C','Canopy',5000000,NULL,1,16),
-(114,'Living Room Set E','Industrial Minimalist',14000000,28,1,16);
+(114,'Living Room Set E','Industrial Minimalist',14000000,28,1,16),
+(115,'Dining Room Set A','Industrial',4000000,34,1,15);
 
 /*Table structure for table `user` */
 
