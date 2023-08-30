@@ -1,5 +1,8 @@
 # project-instudio-app
 #### Link: [Project Instudio App](https://github.com/fitriarien/project-instudio-app.git)
+
+Rescratched code: [Instudio Project Server](https://github.com/fitriarien/instudio-project-server-rescratch.git)
+
 “instudio” is an application that can be used to order interior design service and maintain the database easily.
 - The admin can use this application to maintain product, image, and order.
 - The customer can use this application to view product, order, pay, etc.
